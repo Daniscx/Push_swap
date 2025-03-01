@@ -6,7 +6,7 @@
 /*   By: dmaestro <dmaestro@student.42madrid.con    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 17:09:53 by dmaestro          #+#    #+#             */
-/*   Updated: 2025/03/01 12:32:57 by dmaestro         ###   ########.fr       */
+/*   Updated: 2025/03/01 18:27:16 by dmaestro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ void take_the_data(data_t *data, stach_t *a)
     i = 0;
     aux = a;
     auxn = aux->head;
-    data->biggest = 0;
-    data->smallest = 0;
+    data->biggest = auxn->value;
+    data->smallest = auxn->value;
     while(auxn !=  NULL)
     {
         if(data->biggest < auxn->value)
@@ -106,6 +106,7 @@ void checkpositions(stach_t *b)
     i = b->head->value;
     aux = b->head;
     aux3 = b->head;
+
     while( aux && i != ft_nodelast(aux)->value)
     {
         aux2 = aux3;
